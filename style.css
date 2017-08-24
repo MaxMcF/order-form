@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+
+fieldset {
+  width: 60%;
+  margin: auto;
+  margin-top: 6em;
+  border: 4px double #fb0041;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #03b1c4;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+legend {
+  font-family: 'Cabin Sketch', cursive;
+  color: #0167be;
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  text-align: center;
+  background: #03b1c4;
+  box-shadow: 1px 5px 5px #888888;
+}
+
+i {
+  color: #fd408b;
+}
+
+h1 {
+  color: #fd408b;
+  display: inline-block;
+  font-family: 'Monoton', cursive;
+  font-size: 3em;
+  margin: 0;
+  top: 0;
+  padding-left: 0.3em;
+}
+
+input {
+  padding: 0.5em;
+  border: 1px 
+}
