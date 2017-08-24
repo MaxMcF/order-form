@@ -34,7 +34,7 @@ function fillTableWithCartItems() {
     var tableRow = document.createElement('tr');
     tableAnchor.appendChild(tableRow);
     var deleteBtn = document.createElement('btn');
-    deleteBtn.setAttribute('id', JSON.parse(localStorage.main)[i]);
+    deleteBtn.setAttribute('id', i);
     var xImage = document.createElement('i');
     xImage.setAttribute('class', 'fa fa-times-circle-o');
     xImage.setAttribute('aria-hidden', 'true');
@@ -62,13 +62,17 @@ function fillTableWithCartItems() {
     address.innerText = JSON.parse(localStorage.main)[i][3];
     tableRow.appendChild(address);
   }
+  eventFunc();
 }
 
 //add event listeners to delete buttons to remove items from array
 //when clicked the items are removed from the array
-
-var deleteItem = document.getElementById('deleteBtn');
-deleteItem.addEventListener('click', deleteItemFromCart);
+var eventFunc = function (){
+  for (var i = 0; i < JSON.parse(localStorage.main).length; i++){
+    var deleteItem = document.getElementById(i);
+    deleteItem.addEventListener('click', deleteItemFromCart);
+  }
+};
 
 //function that runs to delete an item from the table
 function deleteItemFromCart () {
