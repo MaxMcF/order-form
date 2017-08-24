@@ -10,6 +10,8 @@ fieldset {
   color: #03b1c4;
   padding-left: 2em;
   padding-right: 2em;
+  min-width: 600px;
+  max-width: 800px;
 }
 
 legend {
@@ -17,30 +19,6 @@ legend {
   color: #0167be;
   font-size: 2em;
   padding: 0.5em;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  margin: 0;
-  top: 0;
-  text-align: center;
-  background: #03b1c4;
-  box-shadow: 1px 5px 5px #888888;
-}
-
-i {
-  color: #fd408b;
-}
-
-h1 {
-  color: #fd408b;
-  display: inline-block;
-  font-family: 'Monoton', cursive;
-  font-size: 3em;
-  margin: 0;
-  top: 0;
-  padding-left: 0.3em;
 }
 
 .button {
@@ -58,17 +36,93 @@ h1 {
   color: white;
 }
 
-footer {
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #03b1c4;
-  background: gray;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
-  margin-top: 5em;
-  border-top: 5px solid lightgray;
-}
-
 .vertBreak {
   margin-top: 6em;
+}
+
+h2 {
+  font-family: 'Cabin Sketch', cursive;
+  color: #0167be;
+  font-size: 2em;
+  margin: 0;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #03b1c4;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.inLine {
+  display: inline-block;
+}
+
+.floatRight {
+  float: right;
+}
+
+.home {
+  width: 90px;
+  height: 60px;
+  background: #fd408b;
+  border-left: 2px solid #fb0041;
+  border-top: 2px solid #fb0041;
+  border-right: 2px solid #fb0041;
+  border-top-right-radius: 0.9em;
+  border-top-left-radius: 0.9em;
+  color: white;
+  position: fixed;
+  top: 120px;
+  transform: rotate(90deg);
+  left: -85px;
+  text-align: center;
+  padding-top: 0.5em;
+  font-family: 'Monoton', cursive;
+  animation: homemove 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes homemove {
+  from {left: -85px;}
+  to {left: -40px;}
+  animation-play-state: paused;
+}
+
+.home:hover {
+  color: yellow;
+  cursor: default;
+  animation: homemove 0.1s forwards;
+}
+
+.about {
+  width: 90px;
+  height: 60px;
+  background: #fd408b;
+  border-left: 2px solid #fb0041;
+  border-top: 2px solid #fb0041;
+  border-right: 2px solid #fb0041;
+  border-top-right-radius: 0.9em;
+  border-top-left-radius: 0.9em;
+  color: white;
+  position: fixed;
+  top: 220px;
+  transform: rotate(90deg);
+  left: -85px;
+  text-align: center;
+  padding-top: 0.5em;
+  font-family: 'Monoton', cursive;
+  animation: aboutmove 0.5s forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes aboutmove {
+  from {left: -85px;}
+  to {left: -40px;}
+  animation-play-state: paused;
+}
+
+.about:hover {
+  color: yellow;
+  cursor: default;
 }
