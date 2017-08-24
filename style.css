@@ -5,7 +5,6 @@ body {
 fieldset {
   width: 60%;
   margin: auto;
-  margin-top: 6em;
   border: 4px double #fb0041;
   font-family: 'Josefin Sans', sans-serif;
   color: #03b1c4;
@@ -44,7 +43,32 @@ h1 {
   padding-left: 0.3em;
 }
 
-input {
-  padding: 0.5em;
-  border: 1px 
+.button {
+  padding: 0.8em;
+  border: 1px solid #03b1c4;
+  background: white;
+  border-radius: 10px;
+  color: #03b1c4;
+  transition: background-color 0.1s ease-out;
+}
+
+.button:hover {
+  background-color: #fd408b;
+  border: 1px solid #fb0041;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #03b1c4;
+  background: gray;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  margin-top: 5em;
+  border-top: 5px solid lightgray;
+}
+
+.vertBreak {
+  margin-top: 6em;
 }

@@ -13,11 +13,16 @@
       <i class="fa fa-bus fa-3x" aria-hidden="true"></i>
       <h1>Bus-Mall</h1>
     </header>
+    <div class="vertBreak"></div>
+    <form id='formElement'>
+      <fieldset>
+        <legend>Choose Product</legend>
+        <!-- <label>Choose Product:<br /> -->
+        <select name='products'>
+        </select>
+      </fieldset>
       <fieldset>
         <legend>Customer Information</legend>
-        <label>Choose Product:<br />
-        <select name='products'>
-        </select><br />
         <label>Name:<br />
         <input type='text' name='nameForm'/></label><br />
         <label>Street Address:<br />
@@ -33,9 +38,14 @@
         <label>Credit Card Number:<br />
         <input type='text' name='ccNum'/></label><br />
         <br>
-        <input type='submit' value='Add to cart' id='submitButton'/>
+        <input type='submit' value='Add to cart' id='submitButton' class="button"/>
       </fieldset>
     </form>
+  <footer>
+    <br>
+    <p>Bus Mall is &copy; Bus Mall 2017, created by Shayne Smith</p>
+    <br>
+  </footer>
   </body>
   <script src='app.js'></script>
 </html>
