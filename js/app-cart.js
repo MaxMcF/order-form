@@ -35,7 +35,8 @@ function fillTableWithCartItems() {
     tableAnchor.appendChild(tableRow);
     var deleteBtn = document.createElement('btn');
     deleteBtn.setAttribute('id', i);
-    var xImage = document.createElement('i');
+    var xImage = document.createElement(i.toString());
+    console.log(i.toString());
     xImage.setAttribute('class', 'fa fa-times-circle-o');
     xImage.setAttribute('aria-hidden', 'true');
     deleteBtn.appendChild(xImage);
@@ -75,9 +76,11 @@ var eventFunc = function (){
 };
 
 //function that runs to delete an item from the table
-function deleteItemFromCart () {
-  var parentOfItem = deleteItem.parentNode;
-  parentOfItem.removeChild();
+function deleteItemFromCart (event) {
+  var itemToDelete = event.currentTarget.id;
+  document.getElementById('firstItem').deleteRow(parseInt(itemToDelete));
+  // var parentOfItem = deleteItem.parentNode;
+  // parentOfItem.removeChild();
 
 }
 fillTableWithCartItems();
