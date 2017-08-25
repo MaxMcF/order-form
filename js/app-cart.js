@@ -33,10 +33,13 @@ function fillTableWithCartItems() {
   for (var i = 0; i < JSON.parse(localStorage.main).length; i++) {
     var tableRow = document.createElement('tr');
     tableAnchor.appendChild(tableRow);
-    var deleteBtn = document.createElement('btn');
-    deleteBtn.setAttribute('id', i);
-    var xImage = document.createElement(i.toString());
-    console.log(i.toString());
+    var buttonData = document.createElement('td');
+    tableRow.appendChild(buttonData);
+    var deleteBtn = document.createElement('button');
+    deleteBtn.setAttribute('id', JSON.parse(localStorage.main)[i][0]);
+    buttonData.appendChild(deleteBtn);
+    var xImage = document.createElement('img');
+    console.log(JSON.parse(localStorage.main)[i][0]);
     xImage.setAttribute('class', 'fa fa-times-circle-o');
     xImage.setAttribute('aria-hidden', 'true');
     deleteBtn.appendChild(xImage);
@@ -70,7 +73,10 @@ function fillTableWithCartItems() {
 //when clicked the items are removed from the array
 var eventFunc = function (){
   for (var i = 0; i < JSON.parse(localStorage.main).length; i++){
-    var deleteItem = document.getElementById(i);
+    var elementId = JSON.parse(localStorage.main)[i][0];
+    console.log(elementId);
+    console.log(elementId.toString());
+    var deleteItem = document.getElementById(elementId);
     deleteItem.addEventListener('click', deleteItemFromCart);
   }
 };
