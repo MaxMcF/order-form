@@ -81,6 +81,7 @@ p {
   font-family: 'Monoton', cursive;
   animation: homemove 0.5s forwards;
   animation-delay: 2s;
+  text-decoration: none;
 }
 
 @keyframes homemove {
