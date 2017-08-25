@@ -26,8 +26,6 @@ var picNineteen = new pics('waterCan', 'assets/water-can.jpg', 0, 0);
 var picTwenty = new pics('wineGlass', 'assets/wine-glass.jpg', 0, 0);
 var mainArray = [picOne, picTwo, picThree, picFour, picFive, picSix, picSeven, picEight, picNine, picTen, picEleven, picTwelve, picThirteen, picFourteen, picFifteen, picSixteen, picSeventeen, picEighteen, picNineteen, picTwenty];
 
-// for loop that runs through the array of all items added to cart to append them to the table
-
 function fillTableWithCartItems() {
   var tableAnchor = document.getElementById('firstItem');
   for (var i = 0; i < JSON.parse(localStorage.main).length; i++) {
@@ -68,9 +66,6 @@ function fillTableWithCartItems() {
   }
   eventFunc();
 }
-
-//add event listeners to delete buttons to remove items from array
-//when clicked the items are removed from the array
 var eventFunc = function (){
   for (var i = 0; i < JSON.parse(localStorage.main).length; i++){
     var elementId = JSON.parse(localStorage.main)[i][0];
@@ -80,13 +75,10 @@ var eventFunc = function (){
     deleteItem.addEventListener('click', deleteItemFromCart);
   }
 };
-
-//function that runs to delete an item from the table
 function deleteItemFromCart (event) {
-  var itemToDelete = event.currentTarget.id;
-  document.getElementById('firstItem').deleteRow(parseInt(itemToDelete));
-  // var parentOfItem = deleteItem.parentNode;
-  // parentOfItem.removeChild();
-
+  var itemToDelete = event.currentTarget;
+  var rowToDelete = itemToDelete.parentNode.parentNode;
+  var tableParent = rowToDelete.parentNode;
+  tableParent.removeChild(rowToDelete);
 }
 fillTableWithCartItems();
