@@ -81,7 +81,7 @@ function deleteItemFromCart (event) {
   var tableParent = rowToDelete.parentNode;
   tableParent.removeChild(rowToDelete);
   for (var i = 0; i < JSON.parse(localStorage.main).length; i++){
-    if (JSON.parse(localStorage.main)[i][0] = event.currentTarget.id){
+    if (JSON.parse(localStorage.main)[i][0] == event.currentTarget.id){
       var updateStorage = JSON.parse(localStorage.main);
       updateStorage.splice(i, 1);
       localStorage.setItem('main', JSON.stringify(updateStorage));
