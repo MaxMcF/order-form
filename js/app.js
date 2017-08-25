@@ -64,6 +64,7 @@ var addToCart = function(event){
     submitArray.push(currentArray);
     localStorage.setItem('main', JSON.stringify(submitArray));
   }
+  document.getElementById('formElement').reset();
 };
 var stopSubmission = function (event){
   event.preventDefault();
