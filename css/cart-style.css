@@ -9,7 +9,7 @@ td, td {
 
 #title {
   width: 80%;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 th {
@@ -31,7 +31,7 @@ tr:hover {
 
 h2 {
   margin: 10% 10% 5% 10%;
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
 
@@ -48,31 +48,19 @@ img {
 body {
   font-family: 'Josefin Sans', sans-serif;
   color: #03b1c4;
-  /*padding-left: 2em;
-  padding-right: 2em;*/
-  /*width: 100%*/
   margin: 0
 }
 
-#bag {
+button {
   height: 10px;
   width: 10px;
   padding: 10px 10px 10px 10px;
 }
 
-section.flat button {
-  color: #fff;
-  background-color: #6496c8;
-  text-shadow: -1px 1px #417cb8;
-  border: none;
+footer {
+  position:
 }
 
-button.hover {
-  background-color: #346392;
-  text-shadow: -1px 1px #27496d;
-}
-
-button.active {
-  background-color: #27496d;
-  text-shadow: -1px 1px #193047;
+.vertBreak {
+  margin-top: 6em;
 }
