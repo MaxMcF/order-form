@@ -32,3 +32,38 @@ footer {
   margin-top: 5em;
   border-top: 5px solid lightgray;
 }
+
+
+.home {
+  width: 90px;
+  height: 60px;
+  background: #fd408b;
+  border-left: 2px solid #fb0041;
+  border-top: 2px solid #fb0041;
+  border-right: 2px solid #fb0041;
+  border-top-right-radius: 0.9em;
+  border-top-left-radius: 0.9em;
+  color: white;
+  position: fixed;
+  top: 120px;
+  transform: rotate(90deg);
+  left: -85px;
+  text-align: center;
+  padding-top: 0.5em;
+  font-family: 'Monoton', cursive;
+  animation: homemove 0.5s forwards;
+  animation-delay: 2s;
+  text-decoration: none;
+}
+
+@keyframes homemove {
+  from {left: -85px;}
+  to {left: -40px;}
+  animation-play-state: paused;
+}
+
+.home:hover {
+  color: yellow;
+  cursor: default;
+  animation: homemove 0.1s forwards;
+}

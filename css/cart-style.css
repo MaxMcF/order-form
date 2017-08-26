@@ -1,16 +1,22 @@
 table {
-  width: 80%;
+  width: 100%;
+  margin: 5% 0 5% 0;
 }
 
 td, td {
   padding: 7px 10px 10px 10px;
 }
 
+#title {
+  width: 80%;
+  text-align: center;
+}
+
 th {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 90%;
-  border-bottom: 2px solid #1111111;
+  border-bottom: 2px solid #111111;
   border-top: 1px solid #999;
   text-align: left;
 }
@@ -21,4 +27,52 @@ tr.even {
 
 tr:hover {
   background-color: #c3e6e5;
+}
+
+h2 {
+  margin: 10% 10% 5% 10%;
+  width: 80%;
+  text-align: center;
+}
+
+#firstItem {
+  width: 80%;
+  margin: 5% 10% 5% 10%;
+}
+
+img {
+  height: 80px;
+  border-radius: 10px;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #03b1c4;
+  /*padding-left: 2em;
+  padding-right: 2em;*/
+  /*width: 100%*/
+  margin: 0
+}
+
+#bag {
+  height: 10px;
+  width: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+section.flat button {
+  color: #fff;
+  background-color: #6496c8;
+  text-shadow: -1px 1px #417cb8;
+  border: none;
+}
+
+button.hover {
+  background-color: #346392;
+  text-shadow: -1px 1px #27496d;
+}
+
+button.active {
+  background-color: #27496d;
+  text-shadow: -1px 1px #193047;
 }
